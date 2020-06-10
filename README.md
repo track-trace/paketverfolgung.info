@@ -87,7 +87,7 @@ This cause that Google Chrome address bar react like the search field on this we
 
 ## 4.) Via browser extention (aka Chrome extention)
 
-The browser extention for Google Chrome allows you to highlight a tracking ID that you find on a website or web based email provider, e.g. a shipping confirmation, and with a right-click you open the context-menu to start the query via paketverfolgung.info.
+The browser extention for Google Chrome allows you to highlight a tracking ID that you find on a website or web based email, e.g. a shipping confirmation, and with a right-click you open the context-menu to start the query via paketverfolgung.info.
 
 Extention is available on the <a href="https://chrome.google.com/webstore/detail/paketverfolgunginfo/dclheidopooiecbibklogmhknfakkpha">Chrome Web Store</a>:
 
