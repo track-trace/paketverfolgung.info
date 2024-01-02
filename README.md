@@ -1,5 +1,5 @@
 <p align="center">
-<a href="https://paketverfolgung.info"><img src="https://storage.googleapis.com/paketverfolgung-info/images/logos/paketverfolgung.info.gif" height="200"></a>
+<a href="https://paketverfolgung.info"><img src="https://storage.googleapis.com/paketverfolgung-info/images/logos/paketverfolgung.info.webp" height="200"></a>
 </p>
 
 # paketverfolgung.info
