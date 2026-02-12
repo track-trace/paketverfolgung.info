@@ -1,105 +1,119 @@
 <p align="center">
-<a href="https://paketverfolgung.info"><img src="https://storage.googleapis.com/paketverfolgung-info/images/logos/paketverfolgung.info.webp" height="200"></a>
+<a href="https://paketverfolgung.info"><img src="https://paketverfolgung.info/assets/img/icons/paketverfolgung.info-128x128.webp"></a>
 </p>
 
-# paketverfolgung.info
+<h3 align="center">Universal package tracking for 400+ carriers worldwide</h3>
 
-A simple service to track parcels/shipments in multiple ways. It supports major shipping service provider like DHL, DPD, FedEx, GLS, Hermes, TNT, UPS and EMS - an international postal Express Mail Service, offered by postal operators of the Universal Postal Union (UPU) connecting more than 180 countries and territories worldwide.
+<p align="center">
+<a href="https://paketverfolgung.info">Website</a> · <a href="https://chrome.google.com/webstore/detail/paketverfolgunginfo/dclheidopooiecbibklogmhknfakkpha">Chrome Extension</a>
+</p>
 
-The service paketverfolgung.info offers multiple ways to track your or the items of your customers. The clou is that you need only to enter valid tracking number of the supported shipping service provider. The service anaylise the tracking ID and redirect the user directly to the correct tracking page of the appropriate shipping service provider. With help of TrackLink&trade; and a browser integration, you or your customers do not even have to visit the site to get the tracking results. You also have the option of integrating the search field into your own page.
+---
 
-## Content
+## About
 
-1.) Via webpage<br>
-2.) Via TrackLink&trade; (aka WebHook)<br>
-3.) Via browser search (aka OpenSearch)<br>
-4.) Via browser extention (aka Chrome extention)<br>
-5.) Webpage integration<br>
+**[paketverfolgung.info](https://paketverfolgung.info)** is a universal package tracking service. Enter any tracking number or order number. The carrier is identified automatically and tracking results are displayed in real time.
 
+The service supports over **400 carriers** across more than **20 languages**.
 
+## Features
 
-## 1.) Via webpage
-<ol>
-<li>Visit with a web browser https://paketverfolgung.info</li>
-<li>Enter your tracking ID in the search form</li>
-<li>hit enter or submit button</li>
-</ol>
+### Automatic carrier detection
 
-## 2.) Via TrackLink&trade; (aka WebHook)
+Enter a tracking number without selecting a carrier. The service analyzes the format and identifies the carrier automatically. When a tracking number matches multiple carriers, all candidates are presented for selection.
 
-TrackLink's replaces to original tracking link and are ideally to shorten and share via email, messenger, etc.
+### Real-time tracking results
 
-TrackLink consists of three segments:
+Shipment status, full event history, and delivery progress are displayed on a single page. Every result links directly to the carrier's official tracking page as the authoritative source.
 
-**URL:** **`https://paketverfolgung.info`**`/ID/ {tracking_id}` <br>
-**Identifier:** `https://paketverfolgung.info`**`/ID/`**`{tracking_id}` <br>
-**Tracking ID:** `https://paketverfolgung.info /ID/`**`{tracking_id}`** <br><br>
-In general the identifier is always **'ID'** as shown in the example below:<br>
-Example: `https://paketverfolgung.info/ID/1Z9999999999999999`
+For carriers that share shipment legs (e.g. an international sender hands off to a local delivery service), results from multiple carriers are merged into a combined view with separate tracking links for each carrier involved.
 
+### Auto-redirect
 
-## 3.) Via browser search (aka OpenSearch)
+When enabled, the service skips the result page and redirects directly to the carrier's tracking page. Useful for users who prefer the carrier's native interface. Can be toggled per session or triggered via the `/r/{tracking_number}` URL prefix.
 
-The browser integration of paketverfolgung.info allows you to use the browser address bar as a search input field, when needed, without visiting the original website before.
+### 20+ languages
 
-This function is called OpenSearch and works with Apple Safari, Microsoft Edge, Mozilla Firefox and Google Chrome. Before you can start using it, you have to setup your browser for this function. Here an example for Google Chrome:
+The interface is fully localized in over 20 languages, including RTL support. Language is detected automatically from your browser settings and can be changed manually at any time.
 
-At the top right, click More <img src="https://storage.googleapis.com/paketverfolgung-info/images/browser_integration/chrome/more.gif"> and then **Settings**.
+Tracking events returned by carriers are displayed in the language provided by the carrier's API. Where the carrier does not support the requested language, results are shown in the carrier's default language while the surrounding interface remains in the user's chosen language.
 
-<img src="https://storage.googleapis.com/paketverfolgung-info/images/browser_integration/chrome/google_chrome_settings.gif">
+### Carrier contact information
 
-Under "Search engine," click **Manage search engines**.
+Each carrier profile includes contact details such as phone number, email, and a link to customer service, displayed alongside the tracking result.
 
-<img src="https://storage.googleapis.com/paketverfolgung-info/images/browser_integration/chrome/manage_search_settings.gif">
+### Rich link previews
 
-To the right of "Other search engines," click **Add**.
+Sharing a tracking link in messaging apps or social media generates a rich preview with the carrier name, current shipment status, and location via Open Graph and Twitter Card meta tags.
 
-<img src="https://storage.googleapis.com/paketverfolgung-info/images/browser_integration/chrome/search_engine_settings.gif">
+### Dark mode
 
-Fill out the text fields as shown below and click **Add**.
+Automatic theme based on system preference, with a manual toggle.
 
-<img src="https://storage.googleapis.com/paketverfolgung-info/images/browser_integration/chrome/edit_search_engine.gif" align="right">
+### Accessibility
 
-**Search engine:**<br>
-`Enter paketverfolgung.info or a name of your choice.`
+WCAG 2.2 Level AA compliant. A dedicated screen reader optimized interface is available at [/accessible/](https://paketverfolgung.info/accessible/), featuring semantic HTML, live region announcements, full keyboard navigation, and reduced visual complexity.
 
-**Keyword:**<br>
-`Enter the character "p" or a keyword of your choice, to trigger later the search function.`
+## Usage
 
-**URL with %s in place of query:**<br>
-`https://paketverfolgung.info/OS/%s`
+### Website
 
-<br><br><br><br><br>
+Visit **[paketverfolgung.info](https://paketverfolgung.info)**, enter your tracking number, and press Enter.
 
-The setup is complete. You are still able to continue to enter a URL in the address bar or any search terms that trigger a Google search.
+### Direct link
 
-<img src="https://storage.googleapis.com/paketverfolgung-info/images/browser_integration/chrome/google_search_bar.gif">
+Link directly to tracking results by appending the tracking number to the URL:
 
-The new feature is, if you enter an "p" followed by a space, then you activate the paketverfolgung.info search.
+```
+https://paketverfolgung.info/{tracking_number}
+```
 
-<img src="https://storage.googleapis.com/paketverfolgung-info/images/browser_integration/chrome/paketverfolgung.info_search_bar_1.gif">
+To force a specific carrier, prefix the tracking number with the carrier slug:
 
-<img src="https://storage.googleapis.com/paketverfolgung-info/images/browser_integration/chrome/paketverfolgung.info_search_bar_2.gif">
+```
+https://paketverfolgung.info/dhl/{tracking_number}
+```
 
-This cause that Google Chrome address bar react like the search field on this website. E.g. an UPS tracking ID, it will open UPS tracking result page.
+### Browser search (OpenSearch)
 
-<img src="https://storage.googleapis.com/paketverfolgung-info/images/browser_integration/chrome/paketverfolgung.info_search_bar_3.gif">
+Track packages directly from your browser address bar.
 
-## 4.) Via browser extention (aka Chrome extention)
+**Chrome setup:**
 
-The browser extention for Google Chrome allows you to highlight a tracking ID that you find on a website or web based email, e.g. a shipping confirmation, and with a right-click you open the context-menu to start the query via paketverfolgung.info.
+1. Go to **Settings** > **Search engine** > **Manage search engines**
+2. Click **Add** and enter:
+   - **Search engine:** `paketverfolgung.info`
+   - **Shortcut:** `p`
+   - **URL:** `https://paketverfolgung.info/%s`
 
-Extention is available on the <a href="https://chrome.google.com/webstore/detail/paketverfolgunginfo/dclheidopooiecbibklogmhknfakkpha">Chrome Web Store</a>:
+Then type `p` + <kbd>Space</kbd> + your tracking number in the address bar.
 
-<img src="https://storage.googleapis.com/paketverfolgung-info/images/browser_extension/chrome/chrome_gmail_shipping_confirmation.gif">
+### Chrome extension
 
-## 5.) Webpage integration
+The [Chrome extension](https://chrome.google.com/webstore/detail/paketverfolgunginfo/dclheidopooiecbibklogmhknfakkpha) lets you highlight a tracking number on any webpage, right-click, and track it directly via the context menu.
 
-To integrate the search field into your own website a few line are needed. You can adjust the look and feel to your needs to keep your corporate identity:
+### Website integration
+
+Link to tracking results from your own website:
 
 ```html
-<form method="post" action="https://paketverfolgung.info/3P/">
-  <input type="text" name="ID" placeholder="">
-  <input type="submit" value="&#128269;">
+<a href="https://paketverfolgung.info/TRACKING_NUMBER">Track your shipment</a>
+```
+
+Or embed a tracking form:
+
+```html
+<form action="https://paketverfolgung.info/" method="get"
+      onsubmit="location.href=this.action+this.id_field.value;return false">
+  <input type="text" name="id_field" placeholder="Tracking number">
+  <button type="submit">Track</button>
 </form>
 ```
+
+## Supported carriers
+
+The service covers **400+ carriers** worldwide, including national postal services, international express and freight carriers, regional couriers, and parcel lockers across Europe, North America, Asia, and beyond.
+
+## License
+
+All mentioned trademarks are the property of their respective owners. All rights reserved.
